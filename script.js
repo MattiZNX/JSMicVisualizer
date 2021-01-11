@@ -26,7 +26,7 @@ function draw(){
     // Lets put origin in the center
     translate (width/2, 0);
 
-    background(0);
+    background(0,255,0);
     // Parameter will indicates the number of samples (campionamenti)
     // 256, 512, 1024 --> Default
     var spectrum = fft.analyze();
