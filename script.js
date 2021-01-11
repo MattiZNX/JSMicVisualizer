@@ -4,7 +4,7 @@ var ftt;
 function setup(){
     mic = new p5.AudioIn();
     mic.start();
-    createCanvas(windowHeight , windowWidth);
+    createCanvas(windowHeight -50 , windowWidth -50);
     fft = new p5.FFT();
     fft.setInput(mic);
     colorMode('HSB');
