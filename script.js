@@ -4,7 +4,8 @@ var ftt;
 function setup(){
     mic = new p5.AudioIn();
     mic.start();
-    createCanvas(window.innerWidth - 50, window.innerHeight - 50);
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
     fft = new p5.FFT();
     fft.setInput(mic);
     colorMode('HSB');
@@ -22,6 +23,12 @@ function meancalculator(arr, samples){
 
 
 function draw(){
+
+    ctx.canvas.width = windowWidth - 50;
+    ctx.canvas.height = windowHeight - 50;
+
+    width = ctx.canvas.width;
+    height = ctx.canvas.height;
 
     // Lets put origin in the center
     translate (width/2, 0);
